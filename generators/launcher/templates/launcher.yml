@@ -1,0 +1,8 @@
+development:
+  launching_date: July 9, 2020 00:00:00
+  
+test:
+  launching_date: July 9, 2020 00:00:00
+
+production:
+  launching_date: July 9, 2020 00:00:00

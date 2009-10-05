@@ -1,0 +1,7 @@
+<% form_for @subscriber do |f| -%>
+<div>
+  <%= f.label :email, "Email" %><br>
+  <%= f.text_field :email %>
+  <%= f.submit "Submit", :disable_with => 'Submiting...' %>
+</div>
+<% end -%>

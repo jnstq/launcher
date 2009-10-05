@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Launcher</title>
+    <%= javascript_include_tag :all, :cache => true %>
+    <%= stylesheet_link_tag 'application' %>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Launching soon!</h1>
+      
+      <%- flash.each do |name, msg| -%>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <%- end -%>
+      
+      <%= yield %>
+      
+      <div id="count_down">
+        <%= @count_down_sentence %>
+      </div>
+      <%= periodically_call_remote(:url => lanunch_path(:js), :frequency => 1) %>
+    </div>
+  </body>
+</html>

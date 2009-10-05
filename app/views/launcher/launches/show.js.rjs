@@ -1,0 +1,1 @@
+page.replace_html 'count_down', Launcher::CountDown.new.to_sentence
